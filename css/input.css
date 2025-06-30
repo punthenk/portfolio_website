@@ -1,0 +1,66 @@
+@import url('https://fonts.cdnfonts.com/css/inter');
+@import url('https://fonts.cdnfonts.com/css/jetbrains-mono-2');
+@import "tailwindcss";
+
+@theme {
+    --color-background: #131313;
+    --color-bg-grey: #282828;
+    --color-border-custom: #626262;
+    --color-redcustom: #DE071C;
+
+    --font-inter: "inter", "sans-serif";
+    --font-jetbrains: "JetBrains Mono", "sans-serif";
+}
+
+.keyword {
+    color: #EE7BFF;
+}
+
+.string {
+    color: #99CC98;
+}
+
+.assign {
+    color: #FFAAAA;
+}
+
+.comment {
+    color: #626262;
+}
+
+.terminal-arrow {
+    color: #046B4B;
+}
+
+.terminal-path {
+    color: #ECBBBA;
+}
+
+@media screen and (max-width: 900px) {
+    .terminal-container {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 620px) {
+
+   .code-block {
+        font-size: 12px;
+    }
+}
+
+
+.phone-contact {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .landscape-contact {
+        display: none;
+    }
+
+    .phone-contact {
+        display: flex;
+    }
+}
