@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/input.css">
     <link rel="stylesheet" href="css/output.css">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon-icon.png">
+    <title>Michiel Nijenhuis</title>
 </head>
 <body class="font-inter text-white bg-background">
     <!-- <nav class="bg-background border-b border-border-custom h-[100px] flex flex-row justify-around items-center"> -->
@@ -73,7 +74,7 @@
             <p class="ml-4 mb-2">codeEditor: <span class="string">"NeoVim"</span>, <span class="comment">// Because it is the best</span></p>
             <p>};</p>
         </div>
-        <p>I like making projects that I’m intersted in. So sometimes that means I make a game and 
+        <p>I like making projects that I’m intrested in. So sometimes that means I make a game and 
         the other time I want to make a website with Laravel. I work from the Netherlands that is 
         where i live. I am good in learning if I find it interesting or I need to. I really like 
         problem solving that is also the reason I like programming so much, everytime I make an error 
@@ -82,38 +83,55 @@
 
     <div class="w-full p-5 sm:p-15" id="contact">
         <h2 class="text-4xl font-bold">CONTACT</h2> 
-        <div class="flex flex-row my-15 justify-between gap-5 landscape-contact">
-           <div class="flex flex-col max-w-1/2 w-full">
-                <div class="flex flex-col">
-                    <span class="ml-2 font-bold">Full Name</span> 
-                    <input class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="text" name="name" value="" placeholder="Firstname Lastname">
+        <form method="POST" id="message_form" class="landscape-contact">
+            <div class="flex flex-row my-15 justify-between gap-5">
+                <div class="flex flex-col max-w-1/2 w-full">
+                    <div class="flex flex-col">
+                        <span class="ml-2 font-bold">Full Name</span> 
+                        <input class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="text" name="name" value="" placeholder="Firstname Lastname">
+                    </div> 
+                    <div class="flex flex-col mt-5">
+                        <span class="ml-2 font-bold">Email</span> 
+                        <input class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="text" name="name" value="" placeholder="Firstname Lastname">
+                    </div> 
                 </div> 
-                <div class="flex flex-col mt-5">
-                    <span class="ml-2 font-bold">Email</span> 
-                    <input class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="text" name="name" value="" placeholder="Firstname Lastname">
+                <div class="flex flex-col w-full max-w-1/2 ">
+                    <span class="ml-2 font-bold">Message</span> 
+                    <textarea class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300 h-full" placeholder="Write your message here" name="message" rows="" cols=""></textarea>
                 </div> 
-           </div> 
-            <div class="flex flex-col w-full max-w-1/2 ">
-                <span class="ml-2 font-bold">Message</span> 
-                <textarea class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300 h-full" placeholder="Write your message here" name="message" rows="" cols=""></textarea>
-            </div> 
-        </div>
+            </div>
+            <div class="flex flex-col w-full justify-center items-center font-jetbrains">
+                <p>Type '<span class="text-redcustom font-bold">send message</span>' and press <span class="text-redcustom font-bold">Enter</span> to send the message</p>
+                <div class="w-full flex flex-row justify-center mt-5">
+                    <span><span class="terminal-arrow">➜</span> <span class="terminal-path">send/the/message</span>:~$ run
+                        <input class="outline-none" id="message_input" autocomplete="off" type="text" name="" value="" placeholder="send message">
+                    </span>
+                    <p id="try_again" class="hidden text-redcustom">Try again</p>
+                    <p id="approved" class="hidden font-bold text-green-500">Yes! Thank you!</p>
+                </div>
+            </div>
+        </form>
 
         <!-- This is for the phone display -->
-        <div class="flex flex-col my-15 justify-between gap-5 phone-contact">
-            <div class="flex flex-col">
-                <span class="ml-2 font-bold">Full Name</span> 
-                <input class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="text" name="name" value="" placeholder="Firstname Lastname">
-            </div> 
-            <div class="flex flex-col">
-                <span class="ml-2 font-bold">Email</span> 
-                <input class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="text" name="name" value="" placeholder="Firstname Lastname">
-            </div> 
+        <form method="" class="phone-contact">
             <div class="flex flex-col w-full">
-                <span class="ml-2 font-bold">Message</span> 
-                <textarea class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300 h-full" placeholder="Write your message here" name="message" rows="" cols=""></textarea>
-            </div> 
-        </div>
+                <div class="flex flex-col my-15 justify-between gap-5 w-full">
+                    <div class="flex flex-col">
+                        <span class="ml-2 font-bold">Full Name</span> 
+                        <input class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="text" name="name" value="" placeholder="Firstname Lastname">
+                    </div> 
+                    <div class="flex flex-col">
+                        <span class="ml-2 font-bold">Email</span> 
+                        <input class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="text" name="name" value="" placeholder="Firstname Lastname">
+                    </div> 
+                    <div class="flex flex-col w-full">
+                        <span class="ml-2 font-bold">Message</span> 
+                        <textarea class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300 h-full" placeholder="Write your message here" name="message" rows="" cols=""></textarea>
+                    </div> 
+                </div>
+                <button type="submit" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">SEND</button>
+            </div>
+        </form>
     </div>
 
     <footer class="border-t border-border-custom flex flex-row gap-2.5 justify-center items-center p-5">
@@ -121,6 +139,7 @@
         <p><span>&copy;</span>Michiel Nijenhuis</p>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/sendMessage.js"></script>
     <script src="js/updateVersion.js"></script>
 </body>
 </html>
