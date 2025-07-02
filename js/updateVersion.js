@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('script[src]').forEach(script => {
     if(script.src.endsWith('.js')) {
-      const version = Date.now() + 86400000;
-      script.src = `${script.src.split('?')[0]}?v=${version}`;
+      const currentTime = new Date().getTime();
+      script.src = `${script.src.split('?')[0]}?v=${currentTime}`;
     }
   });
 

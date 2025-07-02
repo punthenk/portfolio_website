@@ -120,22 +120,24 @@
         </form>
 
         <!-- This is for the phone display -->
-        <form method="" class="phone-contact">
+        <form action="https://api.web3forms.com/submit" method="POST" id="message_form" class="phone-contact">
+            <input type="hidden" name="access_key" value="de08dff7-641a-4623-9b73-a9cf3ab34b31">
             <div class="flex flex-col w-full">
                 <div class="flex flex-col my-15 justify-between gap-5 w-full">
                     <div class="flex flex-col">
                         <span class="ml-2 font-bold">Full Name</span> 
-                        <input class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="text" name="name" value="" placeholder="Firstname Lastname">
+                        <input class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="text" name="name" value="" placeholder="Firstname Lastname" autocomplete="off" required>
                     </div> 
                     <div class="flex flex-col">
                         <span class="ml-2 font-bold">Email</span> 
-                        <input class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="text" name="name" value="" placeholder="Firstname Lastname">
+                        <input class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="email" name="email" value="" placeholder="your@email.com" required>
                     </div> 
                     <div class="flex flex-col w-full">
                         <span class="ml-2 font-bold">Message</span> 
-                        <textarea class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300 h-full" placeholder="Write your message here" name="message" rows="" cols=""></textarea>
+                        <textarea class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300 h-full" placeholder="Write your message here" name="message" required></textarea>
                     </div> 
                 </div>
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 <button type="submit" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">SEND</button>
             </div>
         </form>
@@ -145,8 +147,8 @@
         <a href="https://github.com/punthenk" target="_blank" class="h-6 hover:cursor-pointer"><img class="h-full w-auto opacity-50 hover:opacity-100 transition-all duration-200" src="img/github-icon-2.svg" alt="github logo"></a>
         <p><span>&copy;</span>Michiel Nijenhuis</p>
     </footer>
-    <script src="js/sendMessage.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/updateVersion.js"></script>
+    <script src="js/sendMessage.js?v=1000000"></script>
+    <script src="js/main.js?v=1000000"></script>
+    <script src="js/updateVersion.js?v=1000000"></script>
 </body>
 </html>
