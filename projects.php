@@ -46,14 +46,14 @@ foreach ($results as $row) {
 ?>
     <div class="w-full bg-background p-5 sm:p-15">
         <h2 class="text-4xl font-bold scroll-mt-20" id="projects">PROJECTS</h2>
-        <p class="m-5">In this page I show some of my best projects or some project that show my potential. Lets see them!</p>
+        <p class="m-5">In this page I show some of my projects that I made, some are larger than others but I like them. Lets take a look!</p>
     </div>
 
     <div class="w-full bg-bg-grey p-5 sm:p-15 grid [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))] gap-10">
 
         <?php foreach ($projects as $project): ?>
         <!-- BEGIN -->
-        <div class="max-w-[400px] w-full border border-border-custom rounded-lg">
+        <div class="max-w-[400px] w-full border border-border-custom rounded-lg hover:shadow-xl/25 hover:shadow-pink-50 transition-shadow">
             <div class="bg-white w-full h-[300px] rounded-t-lg p-5">
                 <img src="<?= $project->image ?>" class="">
             </div>
