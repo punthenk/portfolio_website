@@ -83,23 +83,30 @@
 
     <div class="w-full p-5 sm:p-15" id="contact">
         <h2 class="text-4xl font-bold">CONTACT</h2> 
-        <form method="POST" id="message_form" class="landscape-contact">
+        <form action="https://api.web3forms.com/submit" method="POST" id="message_form" class="landscape-contact">
+            <input type="hidden" name="access_key" value="de08dff7-641a-4623-9b73-a9cf3ab34b31">
             <div class="flex flex-row my-15 justify-between gap-5">
                 <div class="flex flex-col max-w-1/2 w-full">
                     <div class="flex flex-col">
                         <span class="ml-2 font-bold">Full Name</span> 
-                        <input class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="text" name="name" value="" placeholder="Firstname Lastname">
+                        <input id="name" class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" 
+                        type="text" name="name" value="" placeholder="Firstname Lastname" autocomplete="off" required>
                     </div> 
                     <div class="flex flex-col mt-5">
                         <span class="ml-2 font-bold">Email</span> 
-                        <input class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="text" name="name" value="" placeholder="Firstname Lastname">
+                        <input id="email" class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300"
+                        type="email" name="email" value="" placeholder="your@email.com" required>
                     </div> 
                 </div> 
                 <div class="flex flex-col w-full max-w-1/2 ">
                     <span class="ml-2 font-bold">Message</span> 
-                    <textarea class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300 h-full" placeholder="Write your message here" name="message" rows="" cols=""></textarea>
+                    <textarea id="message" class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300 h-full"
+                        placeholder="Write your message here" name="message" required></textarea>
                 </div> 
             </div>
+
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
             <div class="flex flex-col w-full justify-center items-center font-jetbrains">
                 <p>Type '<span class="text-redcustom font-bold">send message</span>' and press <span class="text-redcustom font-bold">Enter</span> to send the message</p>
                 <div class="w-full flex flex-row justify-center mt-5">
@@ -107,7 +114,7 @@
                         <input class="outline-none" id="message_input" autocomplete="off" type="text" name="" value="" placeholder="send message">
                     </span>
                     <p id="try_again" class="hidden text-redcustom">Try again</p>
-                    <p id="approved" class="hidden font-bold text-green-500">Yes! Thank you!</p>
+                    <p id="approved" class="hidden font-bold text-green-500">Yes! Thank you! The message has been send</p>
                 </div>
             </div>
         </form>

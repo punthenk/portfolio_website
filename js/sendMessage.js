@@ -3,9 +3,12 @@ const form = document.getElementById("message_form");
 const try_again = document.getElementById("try_again");
 const approved = document.getElementById("approved");
 
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+
 form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    console.log("Form is submitted");
+    approved.style.display = "block";
 });
 
 input.addEventListener('keydown', function(e) {
@@ -17,11 +20,11 @@ input.addEventListener('keydown', function(e) {
         const val = input.value.trim();
 
         if (val.toLowerCase() === 'send message') {
-            approved.style.display = "block";
             form.requestSubmit();
         } else {
-            input.value = '';
             try_again.style.display = "block";
         }
+
+        input.value = '';
     }
 });
