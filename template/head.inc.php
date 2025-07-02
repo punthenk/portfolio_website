@@ -20,7 +20,7 @@
     <!-- </nav> -->
     <nav class="w-full border-b border-border-custom fixed top-0 bg-background/20  backdrop-blur-sm" id="navbar">
       <div class="px-4 relative mx-auto flex max-w-screen-lg flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
-        <a href="index.html" class="h-10"><img class="h-full" src="img/MN_logo.png" alt="Michiel Nijenhuis logo"></a>
+        <a href="index.php" class="h-10"><img class="h-full" src="img/MN_logo.png" alt="Michiel Nijenhuis logo"></a>
         <input class="peer hidden" type="checkbox" id="navbar-open" />
         <label class="absolute right-0 mt-2 mr-3 cursor-pointer text-xl sm:hidden" for="navbar-open">
           <span class="sr-only">Toggle Navigation</span>
