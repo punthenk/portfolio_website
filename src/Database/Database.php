@@ -1,8 +1,11 @@
 <?php
-$config = require(__DIR__."config.php");
-
 class Database
 {
+  
+  private static $host = "db";
+  private static $dbname = "portfolio";
+  private static $user = "root";
+  private static $pass = "root";
 
   private static $dbConnection = null;
   private static $dbStatement = null;
@@ -16,9 +19,8 @@ class Database
     $pdo = null;
     
     try {
-        $dsn= "mysql:host={$GLOBALS['config']['DB_HOST']};dbname={$GLOBALS['config']['DB_NAME']};charset=utf8";
-        $pdo = new PDO($dsn, $GLOBALS['config']['DB_USER'], $GLOBALS['config']['DB_PASS']);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $pdo = new PDO("mysql:host=".self::$host.";dbname=".self::$dbname.";charset=utf8", self::$user, self::$pass);
+      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $error) {
       echo $error;
     }
