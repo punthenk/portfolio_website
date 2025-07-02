@@ -30,7 +30,7 @@
           <ul class="flex flex-col sm:flex-row">
             <li class=""><a class="font-bold nav-link transition-all duration-200 ease-out px-4" href="index.php#home">HOME</a></li>
             <li class=""><a class="font-bold nav-link transition-all duration-200 ease-out px-4" href="index.php#about_me">ABOUT ME</a></li>
-            <li class=""><a class="font-bold nav-link transition-all duration-200 ease-out px-4" href="#">PROJECTS</a></li>
+            <li class=""><a class="font-bold nav-link transition-all duration-200 ease-out px-4" href="projects.php">PROJECTS</a></li>
             <li class=""><a class="font-bold nav-link transition-all duration-200 ease-out px-4" href="index.php#contact">CONTACT</a></li>
           </ul>
         </nav>
