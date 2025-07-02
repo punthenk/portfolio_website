@@ -303,6 +303,9 @@
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
+  .h-7\/12 {
+    height: calc(7/12 * 100%);
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -317,6 +320,18 @@
   }
   .h-full {
     height: 100%;
+  }
+  .h-max {
+    height: max-content;
+  }
+  .min-h-6\/12 {
+    min-height: calc(6/12 * 100%);
+  }
+  .min-h-7\/12 {
+    min-height: calc(7/12 * 100%);
+  }
+  .min-h-9\/12 {
+    min-height: calc(9/12 * 100%);
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
@@ -363,6 +378,12 @@
   .items-center {
     align-items: center;
   }
+  .items-end {
+    align-items: flex-end;
+  }
+  .items-stretch {
+    align-items: stretch;
+  }
   .justify-around {
     justify-content: space-around;
   }
@@ -371,6 +392,9 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .justify-end {
+    justify-content: flex-end;
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);

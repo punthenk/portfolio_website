@@ -49,15 +49,15 @@ foreach ($results as $row) {
         <p class="m-5">In this page I show some of my projects that I made, some are larger than others but I like them. Lets take a look!</p>
     </div>
 
-    <div class="w-full bg-bg-grey p-5 sm:p-15 grid [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))] gap-10">
+    <div class="w-full bg-bg-grey p-5 sm:p-15 grid [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))] gap-10 items-stretch">
 
         <?php foreach ($projects as $project): ?>
         <!-- BEGIN -->
-        <div class="max-w-[400px] w-full border border-border-custom rounded-lg hover:shadow-xl/25 hover:shadow-pink-50 transition-shadow">
+        <div class="max-w-[400px] w-full h-full flex flex-col border border-border-custom rounded-lg hover:shadow-xl/25 hover:shadow-pink-50 transition-shadow">
             <div class="bg-white w-full h-[300px] rounded-t-lg p-5">
                 <img src="<?= $project->image ?>" class="">
             </div>
-            <div class="bg-background rounded-b-lg p-5">
+            <div class="bg-background rounded-b-lg p-5 w-full min-h-6/12">
             <h2 class="text-2xl font-bold mb-2"><?= $project->title ?></h2> 
                 <p><?= $project->description ?></p>
                 <hr class="border-border-custom my-5">
