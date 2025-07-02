@@ -8,6 +8,7 @@ Database::query( "
         p.title,
         p.description,
         p.github_link,
+        p.image,
         t.name AS tag_name,
         t.color AS tag_color
     FROM projects p
@@ -28,6 +29,7 @@ foreach ($results as $row) {
         $project->title = $row->title;
         $project->description = $row->description;
         $project->github_link = $row->github_link;
+        $project->image = $row->image;
         $project->tags = [];
 
         $projects[$id] = $project;
@@ -52,7 +54,9 @@ foreach ($results as $row) {
         <?php foreach ($projects as $project): ?>
         <!-- BEGIN -->
         <div class="max-w-[400px] w-full border border-border-custom rounded-lg">
-            <div class="bg-white w-full h-[300px] rounded-t-lg"></div>
+            <div class="bg-white w-full h-[300px] rounded-t-lg p-5">
+                <img src="<?= $project->image ?>" class="">
+            </div>
             <div class="bg-background rounded-b-lg p-5">
             <h2 class="text-2xl font-bold mb-2"><?= $project->title ?></h2> 
                 <p><?= $project->description ?></p>
