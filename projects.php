@@ -50,7 +50,7 @@ foreach ($results as $row) {
     </div>
 
     <div class="w-full bg-bg-grey p-5 sm:p-15 grid [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))] gap-10 items-stretch">
-        <div class="hidden bg-jscustom bg-phpcustom bg-csscustom bg-htmlcustom bg-tlwcustom bg-csharpcustom"></div>
+        <div class="hidden bg-jscustom bg-phpcustom bg-csscustom bg-htmlcustom bg-tlwcustom bg-csharpcustom bg-sqlcustom"></div>
 
         <?php foreach ($projects as $project): ?>
         <!-- BEGIN -->
@@ -64,7 +64,7 @@ foreach ($results as $row) {
                 <hr class="border-border-custom my-5">
                 <div class="flex flex-row gap-2 font-semibold">
                 <?php foreach ($project->tags as $tag): ?>
-                    <div class="bg-<?=$tag->color?> p-2 rounded-lg"><span><?= htmlspecialchars($tag->name) ?></span></div> 
+                    <div class="bg-<?=$tag->color?> <?php if($tag->color === "jscustom") {echo "text-black";} ?> p-2 rounded-lg"><span><?= htmlspecialchars($tag->name) ?></span></div> 
                 <?php endforeach; ?>
                 </div>
                 <hr class="border-border-custom my-5">

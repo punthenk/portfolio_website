@@ -14,10 +14,7 @@
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
-    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-800: oklch(27.8% 0.033 256.848);
-    --color-gray-900: oklch(21% 0.034 264.665);
-    --color-gray-950: oklch(13% 0.028 261.692);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -52,6 +49,7 @@
     --color-htmlcustom: #e55330;
     --color-tlwcustom: #47bff8;
     --color-csharpcustom: #853d8c;
+    --color-sqlcustom: #e0712b;
     --font-inter: "inter", "sans-serif";
     --font-jetbrains: "JetBrains Mono", "sans-serif";
   }
@@ -315,17 +313,11 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
-  .h-56 {
-    height: calc(var(--spacing) * 56);
-  }
   .h-\[73px\] {
     height: 73px;
   }
   .h-\[100px\] {
     height: 100px;
-  }
-  .h-\[250px\] {
-    height: 250px;
   }
   .h-\[300px\] {
     height: 300px;
@@ -335,15 +327,6 @@
   }
   .min-h-6\/12 {
     min-height: calc(6/12 * 100%);
-  }
-  .min-h-7\/12 {
-    min-height: calc(7/12 * 100%);
-  }
-  .min-h-50 {
-    min-height: calc(var(--spacing) * 50);
-  }
-  .min-h-52 {
-    min-height: calc(var(--spacing) * 52);
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
@@ -476,18 +459,6 @@
   .bg-csscustom {
     background-color: var(--color-csscustom);
   }
-  .bg-gray-500 {
-    background-color: var(--color-gray-500);
-  }
-  .bg-gray-800 {
-    background-color: var(--color-gray-800);
-  }
-  .bg-gray-900 {
-    background-color: var(--color-gray-900);
-  }
-  .bg-gray-950 {
-    background-color: var(--color-gray-950);
-  }
   .bg-htmlcustom {
     background-color: var(--color-htmlcustom);
   }
@@ -497,14 +468,14 @@
   .bg-phpcustom {
     background-color: var(--color-phpcustom);
   }
+  .bg-sqlcustom {
+    background-color: var(--color-sqlcustom);
+  }
   .bg-tlwcustom {
     background-color: var(--color-tlwcustom);
   }
   .bg-white {
     background-color: var(--color-white);
-  }
-  .p-1 {
-    padding: calc(var(--spacing) * 1);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -574,6 +545,9 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .text-black {
+    color: var(--color-black);
+  }
   .text-gray-800 {
     color: var(--color-gray-800);
   }
@@ -615,20 +589,6 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
-  .transition-shadow {
-    transition-property: box-shadow;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .transition-transform {
-    transition-property: transform, translate, scale, rotate;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .duration-100 {
-    --tw-duration: 100ms;
-    transition-duration: 100ms;
-  }
   .duration-200 {
     --tw-duration: 200ms;
     transition-duration: 200ms;
@@ -665,14 +625,6 @@
       color: var(--color-gray-300);
     }
   }
-  .hover\:size-1 {
-    &:hover {
-      @media (hover: hover) {
-        width: calc(var(--spacing) * 1);
-        height: calc(var(--spacing) * 1);
-      }
-    }
-  }
   .hover\:-translate-y-1 {
     &:hover {
       @media (hover: hover) {
@@ -681,52 +633,10 @@
       }
     }
   }
-  .hover\:translate-y-1 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-translate-y: calc(var(--spacing) * 1);
-        translate: var(--tw-translate-x) var(--tw-translate-y);
-      }
-    }
-  }
-  .hover\:scale-50 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-scale-x: 50%;
-        --tw-scale-y: 50%;
-        --tw-scale-z: 50%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
-  .hover\:scale-105 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-scale-x: 105%;
-        --tw-scale-y: 105%;
-        --tw-scale-z: 105%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
-  .hover\:scale-3d {
-    &:hover {
-      @media (hover: hover) {
-        scale: var(--tw-scale-x) var(--tw-scale-y) var(--tw-scale-z);
-      }
-    }
-  }
   .hover\:cursor-pointer {
     &:hover {
       @media (hover: hover) {
         cursor: pointer;
-      }
-    }
-  }
-  .hover\:list-image-none {
-    &:hover {
-      @media (hover: hover) {
-        list-style-image: none;
       }
     }
   }
