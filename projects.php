@@ -54,11 +54,11 @@ foreach ($results as $row) {
 
         <?php foreach ($projects as $project): ?>
         <!-- BEGIN -->
-        <div class="max-w-[400px] w-full h-full flex flex-col border border-border-custom rounded-lg hover:shadow-xl/25 hover:shadow-pink-50 transition-shadow">
-            <div class="bg-white w-full h-[300px] rounded-t-lg p-5">
-                <img src="<?= $project->image ?>" class="">
+        <div class="max-w-[400px] w-full h-full flex flex-col border border-border-custom rounded-lg hover:shadow-xl/25 hover:shadow-pink-50 transition-all hover:-translate-y-1 group">
+            <div class="bg-bg-grey w-full h-[300px] rounded-t-lg p-5 flex flex-row justify-center items-center">
+                <img src="<?= $project->image ?>" class="rounded-lg group-hover:scale-105 transition-all duration-300">
             </div>
-            <div class="bg-background rounded-b-lg p-5 w-full min-h-6/12">
+            <div class="bg-background flex flex-grow flex-col justify-between rounded-b-lg p-5 w-full min-h-6/12">
             <h2 class="text-2xl font-bold mb-2"><?= $project->title ?></h2> 
                 <p><?= $project->description ?></p>
                 <hr class="border-border-custom my-5">
