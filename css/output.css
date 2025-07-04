@@ -732,6 +732,23 @@
 .terminal-path {
   color: #ECBBBA;
 }
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 18px;
+  background-color: white;
+  animation: blink 0.7s steps(2, start) infinite;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    display: none;
+  }
+}
 @media screen and (max-width: 900px) {
   .terminal-container {
     display: none;

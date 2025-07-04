@@ -25,3 +25,18 @@ function navHover() {
 navHover();
 
 window.addEventListener("resize", navHover);
+
+const text = "run welcome";
+const target = document.querySelector(".target_text");
+let i = 0;
+
+function type() {
+    if (i < text.length) {
+        target.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 100);
+    }
+}
+if(target != null)
+    type();
+
