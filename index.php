@@ -79,6 +79,11 @@ include_once(__DIR__."/template/head.inc.php");
                     <p id="approved" class="hidden font-bold text-green-500">Yes! Thank you! The message has been send</p>
                 </div>
             </div>
+            <div class="w-full flex flex-col items-center justify-center">
+                <p class="mt-30">For the people that dont understand how to type text and press enter:</p>
+                <button type="submit" class="bg-white hover:bg-gray-100 hover:cursor-pointer text-gray-800 font-semibold py-2 px-4 mt-5 border border-gray-400 rounded shadow">SEND</button>
+            </div>
+
         </form>
 
         <!-- This is for the phone display -->
