@@ -4,7 +4,7 @@
         <p><span>&copy;</span>Michiel Nijenhuis</p>
     </footer>
     <script src="js/sendMessage.js"></script>
-    <script src="js/main.js?v=100"></script>
+    <script src="js/main.js"></script>
     <script src="js/updateVersion.js"></script>
 </body>
 </html>

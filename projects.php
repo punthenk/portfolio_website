@@ -54,7 +54,7 @@ foreach ($results as $row) {
 
         <?php foreach ($projects as $project): ?>
         <!-- BEGIN -->
-        <div class="max-w-[400px] w-full h-full flex flex-col border border-border-custom rounded-lg hover:shadow-xl/25 hover:shadow-pink-50 transition-all hover:-translate-y-1 group">
+        <div class="max-w-[400px] w-full h-full flex flex-col border border-border-custom rounded-lg hover:shadow-xl/25 hover:shadow-pink-50 transition-all z-0 hover:-translate-y-1 group">
             <div class="bg-bg-grey w-full h-[300px] rounded-t-lg p-5 flex flex-row justify-center items-center">
                 <img src="<?= $project->image ?>" class="rounded-lg group-hover:scale-105 transition-all duration-300">
             </div>

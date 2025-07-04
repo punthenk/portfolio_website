@@ -232,6 +232,21 @@
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
+  .z-0 {
+    z-index: 0;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .z-\[1000\] {
+    z-index: 1000;
+  }
+  .z-auto {
+    z-index: auto;
+  }
+  .order-last {
+    order: 9999;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
