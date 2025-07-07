@@ -23,6 +23,17 @@
     color: #EE7BFF;
 }
 
+::-moz-selection {
+    background-color: #DE071C60;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+*::selection {
+    background-color: #DE071C60;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
 .string {
     color: #99CC98;
 }
@@ -44,24 +55,25 @@
 }
 
 .cursor {
-  display: inline-block;
-  width: 8px;
-  height: 18px;
-  /* Zorg dat de hoogte van de cursor overeenkomt met de tekstgrootte */
-  background-color: white;
-  animation: blink 0.7s steps(2, start) infinite;
-  margin-left: 2px;
-  /* Optionele spatie tussen tekst en cursor */
-  vertical-align: middle;
+    display: inline-block;
+    width: 8px;
+    height: 18px;
+    /* Zorg dat de hoogte van de cursor overeenkomt met de tekstgrootte */
+    background-color: white;
+    animation: blink 0.7s steps(2, start) infinite;
+    margin-left: 2px;
+    /* Optionele spatie tussen tekst en cursor */
+    vertical-align: middle;
 }
-@keyframes blink {
-  0% {
-    opacity: 100%;
-  }
 
-  100% {
-    display: none;
-  }
+@keyframes blink {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -73,7 +85,7 @@
 
 @media screen and (max-width: 620px) {
 
-   .code-block {
+    .code-block {
         font-size: 12px;
     }
 }
