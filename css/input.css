@@ -77,6 +77,12 @@
     }
 }
 
+.active {
+    color: var(--color-redcustom);
+    transition: color 200ms ease;
+}
+
+
 @media screen and (max-width: 900px) {
     .terminal-container {
         display: none;

@@ -37,4 +37,4 @@
       </div>
     </nav>
 
-    <div class="h-[73px]" id="home"></div>
+<div class="h-[73px]" id="<?php if($_SERVER['PHP_SELF'] === "/projects.php") {echo "project";} else {echo "home";} ?>"></div>
