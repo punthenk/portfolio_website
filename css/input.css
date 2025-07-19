@@ -68,11 +68,11 @@
 
 @keyframes blink {
     0% {
-        opacity: 100%;
+        visibility: visible;
     }
 
     100% {
-        display: none;
+        visibility: hidden;
     }
 }
 
