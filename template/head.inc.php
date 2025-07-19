@@ -22,7 +22,7 @@
       <div class="px-4 relative mx-auto flex max-w-screen-lg flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
         <a href="index.php#home" class="h-10"><img class="h-full" src="img/MN_logo.png" alt="Michiel Nijenhuis logo"></a>
         <input class="peer hidden" type="checkbox" id="navbar-open" />
-        <label class="absolute right-0 mt-2 mr-3 cursor-pointer text-xl sm:hidden" for="navbar-open">
+        <label class="absolute right-0 mt-2 mr-3 cursor-pointer text-xl sm:hidden z-50" for="navbar-open">
           <span class="sr-only">Toggle Navigation</span>
           <img class="w-5" src="img/HamburgerIcon.png" alt="Hamburgen icon">
         </label>

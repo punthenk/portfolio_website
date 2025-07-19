@@ -3,8 +3,8 @@
         <a href="https://github.com/punthenk" target="_blank" class="h-6 hover:cursor-pointer"><img class="h-full w-auto opacity-50 hover:opacity-100 transition-all duration-200" src="img/github-icon-2.svg" alt="github logo"></a>
         <p><span>&copy;</span>Michiel Nijenhuis</p>
     </footer>
-    <script src="js/sendMessage.js?v=10"></script>
-    <script src="js/main.js?v=10"></script>
-    <script src="js/updateVersion.js?v=10"></script>
+    <script src="js/sendMessage.js?ver=10"></script>
+    <script src="js/main.js?ver=11"></script>
+    <script src="js/updateVersion.js?ver=10"></script>
 </body>
 </html>
