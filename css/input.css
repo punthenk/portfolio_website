@@ -67,6 +67,10 @@
     vertical-align: middle;
 }
 
+.ascii-text {
+    font-size: clamp(5px, 10px, 15px);
+}
+
 @keyframes blink {
     0% {
         visibility: visible;

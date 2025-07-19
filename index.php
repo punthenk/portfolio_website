@@ -1,20 +1,12 @@
 <?php
 include_once(__DIR__."/template/head.inc.php");
 ?>
-    <div class="flex flex-row justify-between gap-5 w-11/12 m-auto my-20">
-        <div class="border border-border-custom max-w-[800px] w-full bg-black rounded-lg flex flex-col p-7 font-jetbrains terminal-container">
-            <span class="m-auto text-white mb-5">Terminal - michielnijenhuis</span> 
-            <span><span class="terminal-arrow">➜</span> <span class="terminal-path">my/portfolio/website</span>:~$ <span class="target_text"></span><span class="cursor"></span></span><br>
-            <p>Welcome everyone! This is my portfolio website, this is the place where I show what I do and what I like. Take a look around!</p>
-
-            <pre class="text-redcustom">
- .__  __.   .__   _ 
-|   \/   | |   \ | |
-| |\  /| | | |\ \| |
-| | \/ | |_| | \   |
-|_|    |_____|  \__|
-            </pre>
-            <span>I just thought this was cool :)</span>
+    <div class="flex flex-row justify-between gap-5 w-11/12 m-auto my-40" id="home">
+        <div class="border border-border-custom max-w-[800px] w-full bg-black rounded-lg flex flex-col justify-start p-7 min-h-[618px] font-jetbrains terminal-container">
+            <span class="mx-auto text-white mb-5">Terminal - michielnijenhuis</span> 
+            <span class="mb-5"><span class="terminal-arrow">➜</span> <span class="terminal-path">my/portfolio/website</span>:~$ <span class="target_text"></span><span class="cursor"></span></span><br>
+            <div class="ml-5" id="output-text">
+            </div>
         </div> 
         <div class="">
             <h2 class="font-bold text-4xl mb-5">Hello,</h2> 
