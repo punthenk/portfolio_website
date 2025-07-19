@@ -104,4 +104,8 @@
     .phone-contact {
         display: flex;
     }
+    
+    .mobile-link {
+        padding: 10px 0;
+    }
 }
