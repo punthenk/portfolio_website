@@ -1,7 +1,7 @@
 <?php
 return [
-    'DB_HOST' => 'localhost',
-    'DB_NAME' => 'u804674418_portfolio',
-    'DB_USER' => 'u804674418_punthenk',
-    'DB_PASS' => 'l=V84R>sZoIT',
+    'DB_HOST' => 'db',
+    'DB_NAME' => 'portfolio',
+    'DB_USER' => 'root',
+    'DB_PASS' => 'root',
 ];

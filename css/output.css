@@ -1,5 +1,5 @@
 /*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
-@import url('https://fonts.cdnfonts.com/css/inter');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/jetbrains-mono-2');
 @layer properties;
 @layer theme, base, components, utilities;
@@ -50,7 +50,7 @@
     --color-tlwcustom: #47bff8;
     --color-csharpcustom: #853d8c;
     --color-sqlcustom: #e0712b;
-    --font-inter: "inter", "sans-serif";
+    --font-inter: "Inter", sans-serif;
     --font-jetbrains: "JetBrains Mono", "sans-serif";
   }
 }
@@ -274,8 +274,8 @@
   .my-15 {
     margin-block: calc(var(--spacing) * 15);
   }
-  .my-20 {
-    margin-block: calc(var(--spacing) * 20);
+  .my-40 {
+    margin-block: calc(var(--spacing) * 40);
   }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
@@ -300,6 +300,9 @@
   }
   .ml-4 {
     margin-left: calc(var(--spacing) * 4);
+  }
+  .ml-5 {
+    margin-left: calc(var(--spacing) * 5);
   }
   .block {
     display: block;
@@ -337,17 +340,32 @@
   .min-h-6\/12 {
     min-height: calc(6/12 * 100%);
   }
+  .min-h-\[618px\] {
+    min-height: 618px;
+  }
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
   .w-11\/12 {
     width: calc(11/12 * 100%);
   }
+  .w-\[40px\] {
+    width: 40px;
+  }
   .w-auto {
     width: auto;
   }
+  .w-fit {
+    width: fit-content;
+  }
   .w-full {
     width: 100%;
+  }
+  .w-max {
+    width: max-content;
+  }
+  .w-min {
+    width: min-content;
   }
   .max-w-1\/2 {
     max-width: calc(1/2 * 100%);
@@ -396,6 +414,9 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .justify-start {
+    justify-content: flex-start;
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -760,13 +781,20 @@
   margin-left: 2px;
   vertical-align: middle;
 }
+.ascii-text {
+  font-size: clamp(5px, 10px, 15px);
+}
 @keyframes blink {
   0% {
-    opacity: 100%;
+    visibility: visible;
   }
   100% {
-    display: none;
+    visibility: hidden;
   }
+}
+.active {
+  color: var(--color-redcustom);
+  transition: color 200ms ease;
 }
 @media screen and (max-width: 900px) {
   .terminal-container {
@@ -787,6 +815,9 @@
   }
   .phone-contact {
     display: flex;
+  }
+  .mobile-link {
+    padding: 10px 0;
   }
 }
 @property --tw-border-style {
