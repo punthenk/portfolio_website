@@ -5,3 +5,4 @@ css/output.css
 .env
 art.txt
 src/Database/realconfig.php
+src/Database/config.php
