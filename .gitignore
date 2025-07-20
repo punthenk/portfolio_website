@@ -4,3 +4,4 @@ package-lock.json
 css/output.css
 .env
 art.txt
+src/Database/config.php

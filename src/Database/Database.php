@@ -2,16 +2,26 @@
 class Database
 {
   
-  private static $host = "db";
-  private static $dbname = "portfolio";
-  private static $user = "root";
-  private static $pass = "root";
+  private static $host;
+  private static $dbname;
+  private static $user;
+  private static $pass;
 
   private static $dbConnection = null;
   private static $dbStatement = null;
 
+    private static function init(): void
+    {
+        $config = require __DIR__.'/config.php';
+        self::$host = $config['DB_HOST'];
+        self::$dbname = $config['DB_NAME'];
+        self::$user = $config['DB_USER'];
+        self::$pass = $config['DB_PASS'];
+    } 
+
   private static function connect(): bool
   {
+    self::init();
     if(!is_null(self::$dbConnection)) {
       return true;
     }
