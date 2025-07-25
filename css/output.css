@@ -277,8 +277,8 @@
   .my-20 {
     margin-block: calc(var(--spacing) * 20);
   }
-  .my-40 {
-    margin-block: calc(var(--spacing) * 40);
+  .my-32 {
+    margin-block: calc(var(--spacing) * 32);
   }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
@@ -337,14 +337,8 @@
   .h-\[300px\] {
     height: 300px;
   }
-  .h-dvw {
-    height: 100dvw;
-  }
   .h-full {
     height: 100%;
-  }
-  .max-h-svh {
-    max-height: 100svh;
   }
   .min-h-6\/12 {
     min-height: calc(6/12 * 100%);
@@ -358,26 +352,17 @@
   .w-11\/12 {
     width: calc(11/12 * 100%);
   }
-  .w-\[40px\] {
-    width: 40px;
-  }
   .w-auto {
     width: auto;
-  }
-  .w-fit {
-    width: fit-content;
   }
   .w-full {
     width: 100%;
   }
-  .w-max {
-    width: max-content;
-  }
-  .w-min {
-    width: min-content;
-  }
   .max-w-1\/2 {
     max-width: calc(1/2 * 100%);
+  }
+  .max-w-\[100\%\] {
+    max-width: 100%;
   }
   .max-w-\[400px\] {
     max-width: 400px;
@@ -399,6 +384,27 @@
   }
   .scroll-mt-20 {
     scroll-margin-top: calc(var(--spacing) * 20);
+  }
+  .scroll-mt-33 {
+    scroll-margin-top: calc(var(--spacing) * 33);
+  }
+  .scroll-mt-34 {
+    scroll-margin-top: calc(var(--spacing) * 34);
+  }
+  .scroll-mt-35 {
+    scroll-margin-top: calc(var(--spacing) * 35);
+  }
+  .scroll-mt-40 {
+    scroll-margin-top: calc(var(--spacing) * 40);
+  }
+  .scroll-mt-50 {
+    scroll-margin-top: calc(var(--spacing) * 50);
+  }
+  .scroll-mt-80 {
+    scroll-margin-top: calc(var(--spacing) * 80);
+  }
+  .scroll-mt-96 {
+    scroll-margin-top: calc(var(--spacing) * 96);
   }
   .\[grid-template-columns\:repeat\(auto-fit\,minmax\(300px\,1fr\)\)\] {
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
@@ -757,6 +763,11 @@
       padding-block: calc(var(--spacing) * 0);
     }
   }
+  .md\:max-w-9\/12 {
+    @media (width >= 48rem) {
+      max-width: calc(9/12 * 100%);
+    }
+  }
 }
 .keyword {
   color: #EE7BFF;
@@ -833,6 +844,9 @@
   .mobile-link {
     padding: 10px 0;
   }
+}
+.contact-section input, .contact-section textarea {
+  outline: none;
 }
 @property --tw-border-style {
   syntax: "*";
