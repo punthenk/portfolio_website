@@ -31,8 +31,8 @@ const target = document.querySelector(".target_text");
 
 const terminal_output = document.querySelector("#output-text");
 let terminal_output_text = `
-                <p>Welcome everyone! This is my portfolio website, this is the place where I show what I do and what I like. Take a look around!</p>
-                <pre class="text-redcustom">
+<p>Welcome everyone! This is my portfolio website, this is the place where I show what I do and what I like. Take a look around!</p>
+<pre class="text-redcustom">
 <div class="ascii-text">
 ###############              ###############   ############              ##### #####
 ##################        ##################   ##############            ##### #####
@@ -56,8 +56,8 @@ let terminal_output_text = `
 ##### #####                      ##########################           ##############
 ##### #####                      ##########################              ###########
 </div>
-                </pre>
-                <span>I just thought this was cool :)</span>
+</pre>
+<span>I just thought this was cool :)</span>
         `;
 
 
