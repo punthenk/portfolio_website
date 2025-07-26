@@ -13,7 +13,7 @@ if (form !== null) {
     });
 }
 
-if (input !== null) {
+if (input) {
     input.addEventListener('keydown', function(e) {
         if(try_again.style.display = "block") {
             try_again.style.display = "none";
