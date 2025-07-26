@@ -14,11 +14,14 @@
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
+    --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --breakpoint-lg: 64rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
@@ -274,12 +277,6 @@
   .my-15 {
     margin-block: calc(var(--spacing) * 15);
   }
-  .my-20 {
-    margin-block: calc(var(--spacing) * 20);
-  }
-  .my-32 {
-    margin-block: calc(var(--spacing) * 32);
-  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -322,6 +319,10 @@
   .hidden {
     display: none;
   }
+  .size-6 {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+  }
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
@@ -336,6 +337,9 @@
   }
   .h-\[300px\] {
     height: 300px;
+  }
+  .h-dvh {
+    height: 100dvh;
   }
   .h-full {
     height: 100%;
@@ -387,24 +391,6 @@
   }
   .scroll-mt-33 {
     scroll-margin-top: calc(var(--spacing) * 33);
-  }
-  .scroll-mt-34 {
-    scroll-margin-top: calc(var(--spacing) * 34);
-  }
-  .scroll-mt-35 {
-    scroll-margin-top: calc(var(--spacing) * 35);
-  }
-  .scroll-mt-40 {
-    scroll-margin-top: calc(var(--spacing) * 40);
-  }
-  .scroll-mt-50 {
-    scroll-margin-top: calc(var(--spacing) * 50);
-  }
-  .scroll-mt-80 {
-    scroll-margin-top: calc(var(--spacing) * 80);
-  }
-  .scroll-mt-96 {
-    scroll-margin-top: calc(var(--spacing) * 96);
   }
   .\[grid-template-columns\:repeat\(auto-fit\,minmax\(300px\,1fr\)\)\] {
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
@@ -477,11 +463,18 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .border-b-1 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
   .border-border-custom {
     border-color: var(--color-border-custom);
   }
   .border-gray-400 {
     border-color: var(--color-gray-400);
+  }
+  .border-b-gray-600 {
+    border-bottom-color: var(--color-gray-600);
   }
   .bg-background {
     background-color: var(--color-background);
@@ -569,6 +562,10 @@
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -718,11 +715,6 @@
       }
     }
   }
-  .sm\:my-40 {
-    @media (width >= 40rem) {
-      margin-block: calc(var(--spacing) * 40);
-    }
-  }
   .sm\:block {
     @media (width >= 40rem) {
       display: block;
@@ -773,12 +765,12 @@
   color: #EE7BFF;
 }
 ::-moz-selection {
-  background-color: #DE071C60;
+  background-color: #596a9b60;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 *::selection {
-  background-color: #DE071C60;
+  background-color: #596a9b60;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -847,6 +839,22 @@
 }
 .contact-section input, .contact-section textarea {
   outline: none;
+}
+.hero-bg {
+  background: linear-gradient(135deg, rgba(255, 70, 70, 0.05) 0%, transparent 25%), linear-gradient(225deg, rgba(255, 70, 70, 0.08) 0%, transparent 25%), radial-gradient(circle at 20% 80%, rgba(255, 70, 70, 0.12) 0%, transparent 30%), radial-gradient(circle at 80% 20%, rgba(255, 70, 70, 0.08) 0%, transparent 30%), radial-gradient(circle at 40% 40%, rgba(255, 70, 70, 0.06) 0%, transparent 30%), #2a2a28;
+}
+#scroll-indicator {
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
 @property --tw-border-style {
   syntax: "*";
@@ -1048,6 +1056,16 @@
   syntax: "*";
   inherits: false;
   initial-value: 0;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {

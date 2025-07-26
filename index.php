@@ -1,22 +1,35 @@
 <?php
 include_once(__DIR__."/template/head.inc.php");
 ?>
-    <div class="flex flex-row justify-between gap-5 w-11/12 m-auto my-20 sm:my-40" id="home">
-        <div class="border border-border-custom max-w-[800px] w-full bg-black rounded-lg flex flex-col justify-start p-7 min-h-[618px] font-jetbrains terminal-container">
-            <span class="mx-auto text-white mb-5">Terminal - michielnijenhuis</span> 
-            <span class="mb-5"><span class="terminal-arrow">➜</span> <span class="terminal-path">my/portfolio/website</span>:~$ <span class="target_text"></span><span class="cursor"></span></span><br>
-            <div class="ml-5" id="output-text">
-            </div>
-        </div> 
-        <div class="">
-            <h2 class="font-bold text-4xl mb-5">Hello,</h2> 
-            <p class="max-w-[800px] w-full font-medium">My name is <span class="text-redcustom font-bold">Michiel Nijenhuis</span>. I am a software developer. I love building things and 
-            learn new things. This I like programming a lot, I code a lot at home and make projects 
-            I’m intrested in, that can be different sometimes.<br><br>
+    <section class="h-dvh w-full flex justify-center items-center hero-bg border-b-gray-600 border-b-1">
+        <div class="flex flex-row justify-between gap-5 w-11/12 m-auto" id="home">
+            <div class="border border-border-custom max-w-[800px] w-full bg-black rounded-lg flex flex-col justify-start p-7 min-h-[618px] font-jetbrains terminal-container">
+                <span class="mx-auto text-white mb-5">Terminal - michielnijenhuis</span> 
+                <span class="mb-5"><span class="terminal-arrow">➜</span> <span class="terminal-path">my/portfolio/website</span>:~$ <span class="target_text"></span><span class="cursor"></span></span><br>
+                <div class="ml-5" id="output-text">
+                </div>
+            </div> 
+            <div class="flex flex-col justify-between">
+                <div>
+                    <h2 class="font-bold text-4xl mb-5">Hello,</h2> 
+                    <p class="max-w-[800px] w-full font-medium">My name is <span class="text-redcustom font-bold">Michiel Nijenhuis</span>. I am a software developer. I love building things and 
+                    learn new things. This I like programming a lot, I code a lot at home and make projects 
+                    I’m intrested in, that can be different sometimes.<br><br>
 
-            So that is why I show my projects on this site so you can see them!</p>
+                    So that is why I show my projects on this site so you can see them!</p>
+                </div>
+                <div class="flex flex-col justify-center items-center" id="scroll-indicator">
+                    <a href="index.php#about_me"><span class="text-sm mb-2 font-bold" data-i18n="scrollDown">See more</span></a>
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"> -->
+                        <!--   <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" /> -->
+                        <!-- </svg> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
     <div class="w-full bg-bg-grey p-5 sm:p-15">
         <h2 class="text-4xl font-bold scroll-mt-33" id="about_me">ABOUT ME</h2>
         <div class="m-auto my-13 font-jetbrains bg-background border border-border-custom rounded-lg p-4 sm:p-8 w-11/12 code-block">
@@ -24,7 +37,7 @@ include_once(__DIR__."/template/head.inc.php");
             <p class="ml-4 mb-2">name: <span class="string">"Michiel Nijenhuis"</span>,</p>
             <p class="ml-4 mb-2">email: <span class="string">"contact@michielnijenhuis.com"</span>,</p>
             <p class="ml-4 mb-2">skills: [<span class="string">"HTML"</span>, <span class="string">"CSS"</span>, <span class="string">"PHP"</span>, <span class="string">"C#"</span>, <span class="string">"JAVASCRIPT"</span>, <span class="string">"SQL"</span>],</p>
-            <p class="ml-4 mb-2">codeEditor: <span class="string">"NeoVim"</span>, <span class="comment">// Because it is the best</span></p>
+            <p class="ml-4 mb-2">codeEditor: <span class="string">"Neovim"</span>, <span class="comment">// Because it is the best</span></p>
             <p>};</p>
         </div>
         <p class="max-w-[100%] md:max-w-9/12">I like making projects that I’m intrested in. So sometimes that means I make a game and 

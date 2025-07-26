@@ -25,12 +25,13 @@
 }
 
 ::-moz-selection {
-    background-color: #DE071C60;
+    background-color: #596a9b60;
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
+
 *::selection {
-    background-color: #DE071C60;
+    background-color: #596a9b60;
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -114,12 +115,37 @@
     .phone-contact {
         display: flex;
     }
-    
+
     .mobile-link {
         padding: 10px 0;
     }
 }
 
-.contact-section input, .contact-section textarea {
+.contact-section input,
+.contact-section textarea {
     outline: none;
+}
+
+.hero-bg {
+    background: linear-gradient(135deg, rgba(255, 70, 70, 0.05) 0%,
+        transparent 25%), linear-gradient(225deg, rgba(255, 70, 70, 0.08) 0%,
+        transparent 25%), radial-gradient(circle at 20% 80%, rgba(255, 70, 70, 0.12) 0%,
+        transparent 30%), radial-gradient(circle at 80% 20%, rgba(255, 70, 70, 0.08) 0%,
+        transparent 30%), radial-gradient(circle at 40% 40%, rgba(255, 70, 70, 0.06) 0%,
+        transparent 30%), #2a2a28;
+}
+
+#scroll-indicator {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
 }
