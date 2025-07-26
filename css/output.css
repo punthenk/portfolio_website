@@ -476,6 +476,9 @@
   .border-b-gray-600 {
     border-bottom-color: var(--color-gray-600);
   }
+  .bg-\[\#383838\] {
+    background-color: #383838;
+  }
   .bg-background {
     background-color: var(--color-background);
   }
@@ -816,6 +819,9 @@
 @media screen and (max-width: 900px) {
   .terminal-container {
     display: none;
+  }
+  .phone-height {
+    height: 70dvh;
   }
 }
 @media screen and (max-width: 620px) {
