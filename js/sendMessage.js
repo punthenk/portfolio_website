@@ -1,4 +1,5 @@
 const input = document.getElementById("message_input");
+const button = document.getElementById("message_button");
 const form = document.getElementById("message_form");
 const try_again = document.getElementById("try_again");
 const approved = document.getElementById("approved");
@@ -30,5 +31,11 @@ if (input) {
 
             input.value = '';
         }
+    });
+}
+
+if (button) {
+    button.addEventListener('click', function(e) {
+        form.requestSubmit();
     });
 }

@@ -69,7 +69,7 @@ foreach ($results as $row) {
                 <?php endforeach; ?>
                 </div>
                 <hr class="border-border-custom my-5">
-                <a href="<?= $project->github_link ?>" target="_blank" class="font-jetbrains underline">$ git view project</a>
+                <a href="<?= $project->github_link ?>" target="_blank" class="font-jetbrains underline hover:cursor-pointer">$ git view project</a>
             </div> 
         </div>
         <!-- END -->
