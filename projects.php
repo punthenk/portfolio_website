@@ -50,12 +50,13 @@ foreach ($results as $row) {
     </div>
 
     <div class="w-full bg-bg-grey p-5 sm:p-15 grid [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))] gap-10 items-stretch">
+        <!-- this is for loading all the colors before the get used because of some loading issues -->
         <div class="hidden bg-jscustom bg-phpcustom bg-csscustom bg-htmlcustom bg-tlwcustom bg-csharpcustom bg-sqlcustom"></div>
 
         <?php foreach ($projects as $project): ?>
         <!-- BEGIN -->
         <div class="max-w-[400px] w-full h-full flex flex-col border border-border-custom rounded-lg hover:shadow-xl/25 hover:shadow-pink-50 transition-all z-0 hover:-translate-y-1 group">
-            <div class="bg-bg-grey w-full h-[300px] rounded-t-lg p-5 flex flex-row justify-center items-center">
+            <div class="bg-[#383838] w-full h-[300px] rounded-t-lg p-5 flex flex-row justify-center items-center">
                 <img src="<?= $project->image ?>" class="rounded-lg group-hover:scale-105 transition-all duration-300">
             </div>
             <div class="bg-background flex flex-grow flex-col justify-between rounded-b-lg p-5 w-full min-h-6/12">
