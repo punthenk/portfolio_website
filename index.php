@@ -2,7 +2,7 @@
 include_once(__DIR__."/template/head.inc.php");
 ?>
     <section class="h-dvh w-full flex justify-center items-center hero-bg border-b-gray-600 border-b-1">
-        <div class="flex flex-row justify-between gap-5 w-11/12 m-auto" id="home">
+        <div class="flex flex-row justify-between gap-5 w-11/12 m-auto phone-height" id="home">
             <div class="border border-border-custom max-w-[800px] w-full bg-black rounded-lg flex flex-col justify-start p-7 min-h-[618px] font-jetbrains terminal-container">
                 <span class="mx-auto text-white mb-5">Terminal - michielnijenhuis</span> 
                 <span class="mb-5"><span class="terminal-arrow">➜</span> <span class="terminal-path">my/portfolio/website</span>:~$ <span class="target_text"></span><span class="cursor"></span></span><br>

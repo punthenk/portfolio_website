@@ -92,6 +92,9 @@
     .terminal-container {
         display: none;
     }
+    .phone-height {
+        height: 70dvh;
+    }
 }
 
 
