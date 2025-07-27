@@ -1,7 +1,7 @@
 <?php
 include_once(__DIR__."/template/head.inc.php");
 ?>
-    <section class="h-dvh w-full flex justify-center items-center hero-bg border-b-gray-600 border-b-1">
+    <section class="h-[93dvh] w-full flex justify-center items-center hero-bg border-b-gray-600 border-b-1">
         <div class="flex flex-row justify-between gap-5 w-11/12 m-auto phone-height" id="home">
             <div class="border border-border-custom max-w-[800px] w-full bg-black rounded-lg flex flex-col justify-start p-7 min-h-[618px] font-jetbrains terminal-container">
                 <span class="mx-auto text-white mb-5">Terminal - michielnijenhuis</span> 
@@ -85,7 +85,7 @@ include_once(__DIR__."/template/head.inc.php");
             </div>
             <div class="w-full flex flex-col items-center justify-center">
                 <p class="mt-30">For the people that dont understand how to type text and press enter:</p>
-                <button type="button" class="bg-white hover:bg-gray-100 hover:cursor-pointer text-gray-800 font-semibold py-2 px-4 mt-5 border border-gray-400 rounded shadow">SEND MESSAGE</button>
+                <button id="message_button" type="button" class="bg-white hover:bg-gray-100 hover:cursor-pointer text-gray-800 font-semibold py-2 px-4 mt-5 border border-gray-400 rounded shadow">SEND MESSAGE</button>
             </div>
 
         </form>
