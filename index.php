@@ -109,7 +109,7 @@ include_once(__DIR__."/template/head.inc.php");
                     </div> 
                 </div>
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                <button type="submit" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">SEND</button>
+                <button type="submit" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">SEND MESSAGE</button>
             </div>
         </form>
     </div>
