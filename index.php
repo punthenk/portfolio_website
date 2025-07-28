@@ -45,6 +45,10 @@ include_once(__DIR__."/template/head.inc.php");
         where i live. I am good in learning if I find it interesting or I need to. I really like 
         problem solving that is also the reason I like programming so much, everytime I make an error 
         I like to figure it out and look for it until I find and fix it.</p>
+        <div class="h-auto mt-5 flex gap-5">
+            <a href="https://github.com/punthenk" target="_blank" class="h-8 hover:cursor-pointer"><img class="h-full w-auto opacity-50 hover:opacity-100 transition-all duration-200" src="img/github-icon-2.svg" alt="github logo"></a>
+            <a href="mailto:contact@michielnijenhuis.com" target="_blank" class="h-8 hover:cursor-pointer"><img class="h-full w-auto opacity-50 hover:opacity-100 transition-all duration-200" src="img/email-sms-1.svg" alt="mail icon"></a>
+        </div>
     </div>
 
     <div class="w-full p-5 sm:p-15 contact-section" id="contact">
