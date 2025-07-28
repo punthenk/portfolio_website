@@ -1,7 +1,7 @@
 <?php
 include_once(__DIR__."/template/head.inc.php");
 ?>
-    <section class="h-[93dvh] w-full flex justify-center items-center hero-bg border-b-gray-600 border-b-1">
+    <section class="h-[94dvh] w-full flex justify-center items-center hero-bg border-b-border-custom border-b-1">
         <div class="flex flex-row justify-between gap-5 w-11/12 m-auto phone-height" id="home">
             <div class="border border-border-custom max-w-[800px] w-full bg-black rounded-lg flex flex-col justify-start p-7 min-h-[618px] font-jetbrains terminal-container">
                 <span class="mx-auto text-white mb-5">Terminal - michielnijenhuis</span> 
@@ -45,6 +45,10 @@ include_once(__DIR__."/template/head.inc.php");
         where i live. I am good in learning if I find it interesting or I need to. I really like 
         problem solving that is also the reason I like programming so much, everytime I make an error 
         I like to figure it out and look for it until I find and fix it.</p>
+        <div class="h-auto mt-5 flex gap-5">
+            <a href="https://github.com/punthenk" target="_blank" class="h-8 hover:cursor-pointer"><img class="h-full w-auto opacity-50 hover:opacity-100 transition-all duration-200" src="img/github-icon-2.svg" alt="github logo"></a>
+            <a href="mailto:contact@michielnijenhuis.com" target="_blank" class="h-8 hover:cursor-pointer"><img class="h-full w-auto opacity-50 hover:opacity-100 transition-all duration-200" src="img/email-sms-1.svg" alt="mail icon"></a>
+        </div>
     </div>
 
     <div class="w-full p-5 sm:p-15 contact-section" id="contact">
@@ -109,7 +113,7 @@ include_once(__DIR__."/template/head.inc.php");
                     </div> 
                 </div>
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                <button type="submit" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">SEND</button>
+                <button type="submit" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">SEND MESSAGE</button>
             </div>
         </form>
     </div>
