@@ -91,9 +91,6 @@ if (target != null) {
     }, 1000);
 }
 
-
-
-
 const home = document.querySelector("#home");
 const about_me = document.querySelector("#about_me");
 const contact = document.querySelector("#contact");
@@ -101,14 +98,13 @@ const project = document.querySelector("#project");
 
 const sections = [home, about_me, contact];
 
-const observer = new IntersectionObserver(
-    (entries) => {
+const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href').substring(10) === entry.target.id) {
-                        project.classList.remove('active');
+                        project?.classList.remove('active');
                         link.classList.add('active');
                     }
                 });
@@ -124,5 +120,5 @@ const allNull = sections.every(item => item === null);
 if (!allNull) {
     sections.forEach(section => observer.observe(section));
 } else {
-    project.classList.add('active');
+    project?.classList.add('active');
 }
