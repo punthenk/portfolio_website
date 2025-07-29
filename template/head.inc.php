@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/input.css">
     <link rel="stylesheet" href="css/output.css">
-    <link rel="icon" type="image/x-icon" href="img/favicon-icon.png">
+    <link rel="icon" type="image/x-icon" href="img/icons/favicon.ico">
     <title>Michiel Nijenhuis</title>
 </head>
 
