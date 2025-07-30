@@ -20,7 +20,11 @@
 }
 
 .keyword {
-    color: #EE7BFF;
+    /* color: #EE7BFF; */
+    color: #3e8fb0;
+}
+.branch {
+    color: #eb6f92;
 }
 
 ::-moz-selection {
@@ -36,11 +40,16 @@
 }
 
 .string {
-    color: #99CC98;
+    /* color: #99CC98; */
+    color: #f6c177;
 }
 
-.assign {
-    color: #FFAAAA;
+.variable {
+    /* color: #FFAAAA; */
+    color: #9ccfd8;
+}
+.rest {
+    color: #908caa;
 }
 
 .comment {
