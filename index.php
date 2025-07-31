@@ -25,13 +25,14 @@ include_once(__DIR__."/template/head.inc.php");
 
                     So that is why I show my projects on this site so you can see them!</p>
             </div>
-            <div class="flex flex-col justify-center items-center" id="scroll-indicator">
-                <a href="index.php#about_me"><span class="text-sm mb-2 font-bold" data-i18n="scrollDown">See
-                        more</span></a>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                </svg>
+            <div class="" id="scroll-indicator">
+                <div class="w-fit m-auto flex flex-col justify-center items-center hover:cursor-pointer">
+                    <span class="text-sm mb-2 font-bold" data-i18n="scrollDown">See more!</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
