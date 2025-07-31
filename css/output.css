@@ -358,6 +358,9 @@
   .min-h-\[618px\] {
     min-height: 618px;
   }
+  .w-2\.5 {
+    width: calc(var(--spacing) * 2.5);
+  }
   .w-7 {
     width: calc(var(--spacing) * 7);
   }
@@ -369,6 +372,9 @@
   }
   .w-auto {
     width: auto;
+  }
+  .w-fit {
+    width: fit-content;
   }
   .w-full {
     width: 100%;
@@ -387,6 +393,12 @@
   }
   .max-w-\[800px\] {
     max-width: 800px;
+  }
+  .max-w-max {
+    max-width: max-content;
+  }
+  .max-w-min {
+    max-width: min-content;
   }
   .max-w-screen-lg {
     max-width: var(--breakpoint-lg);
@@ -704,13 +716,6 @@
       @media (hover: hover) {
         --tw-translate-y: calc(var(--spacing) * -1);
         translate: var(--tw-translate-x) var(--tw-translate-y);
-      }
-    }
-  }
-  .hover\:cursor-none {
-    &:hover {
-      @media (hover: hover) {
-        cursor: none;
       }
     }
   }

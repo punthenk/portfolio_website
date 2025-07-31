@@ -1,7 +1,6 @@
 const navLinks = document.querySelectorAll(".nav-link");
 
 function navHover() {
-
     //If the window is bigger than 1000px than execute the code
     if (window.innerWidth > 1000) {
 
@@ -21,9 +20,7 @@ function navHover() {
         });
     }
 }
-
 navHover();
-
 window.addEventListener("resize", navHover);
 
 const text = "run welcome";
@@ -122,3 +119,9 @@ if (!allNull) {
 } else {
     project?.classList.add('active');
 }
+
+const scroll_inidcator = document.getElementById('scroll-indicator'); 
+scroll_inidcator?.addEventListener('click', function() {
+    const scroll_target = document.getElementById('about_me');
+    scroll_target?.scrollIntoView();
+});
