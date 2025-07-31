@@ -19,9 +19,9 @@ include_once(__DIR__."/template/head.inc.php");
             <div>
                 <h2 class="font-bold text-4xl mb-5">Hello,</h2>
                 <p class="max-w-[800px] w-full font-medium">My name is <span class="text-redcustom font-bold">Michiel
-                        Nijenhuis</span>. I am a software developer. I love building things and
-                    learn new things. This I like programming a lot, I code a lot at home and make projects
-                    I’m intrested in, that can be different sometimes.<br><br>
+                        Nijenhuis</span>. I am a software developer. I love building and
+                    learning new things. I like programming a lot, I code a lot at home and make projects
+                    I’m intrested in.<br><br>
 
                     So that is why I show my projects on this site so you can see them!</p>
             </div>
