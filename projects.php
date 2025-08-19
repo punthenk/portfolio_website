@@ -26,6 +26,7 @@ foreach ($results as $row) {
     if (!isset($projects[$id])) {
         // Maak een object voor elk project
         $project = new stdClass();
+        $project->id = $id;
         $project->title = $row->title;
         $project->description = $row->description;
         $project->github_link = $row->github_link;
@@ -60,12 +61,21 @@ foreach ($results as $row) {
                 <img src="<?= $project->image ?>" class="rounded-lg group-hover:scale-105 transition-all duration-300">
             </div>
             <div class="bg-background flex flex-grow flex-col justify-between rounded-b-lg p-5 w-full min-h-6/12">
-            <h2 class="text-2xl font-bold mb-2"><?= $project->title ?></h2> 
-                <p><?= $project->description ?></p>
+                <div class="">
+                    <h2 class="text-2xl font-bold mb-2"><?= $project->title ?></h2> 
+                    <p id="project-desc-<?= $project->id ?>" class="hover:cursor-pointer"
+                        onclick="toggleDescription(<?= $project->id ?>)"
+                        data-short="<?= htmlspecialchars(substr($project->description, 0, 80).'...', ENT_QUOTES, 'UTF-8') ?>"
+                        data-full="<?= htmlspecialchars($project->description, ENT_QUOTES, 'UTF-8') ?>"
+                    >
+                        <?= htmlspecialchars(substr($project->description, 0, 80).'...') ?> 
+                    </p>
+                    <span id="more-less-btn-<?= $project->id ?>" class="hover:cursor-pointer text-redcustom font-bold" onclick="toggleDescription(<?= $project->id ?>)" >See more</span>
+                </div>
                 <hr class="border-border-custom my-5">
                 <div class="flex flex-row gap-2 font-semibold">
                 <?php foreach ($project->tags as $tag): ?>
-                    <div class="bg-<?=$tag->color?> <?php if($tag->color === "jscustom" || $tag->color === "rustcustom") {echo "text-black";} ?> p-2 rounded-lg"><span><?= htmlspecialchars($tag->name) ?></span></div> 
+                    <div class="bg-<?=$tag->color?> <?php if($tag->color === "jscustom") {echo "text-black";} ?> p-2 rounded-lg"><span><?= htmlspecialchars($tag->name) ?></span></div> 
                 <?php endforeach; ?>
                 </div>
                 <hr class="border-border-custom my-5">
