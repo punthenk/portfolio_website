@@ -65,7 +65,7 @@ foreach ($results as $row) {
                 <hr class="border-border-custom my-5">
                 <div class="flex flex-row gap-2 font-semibold">
                 <?php foreach ($project->tags as $tag): ?>
-                    <div class="bg-<?=$tag->color?> <?php if($tag->color === "jscustom") {echo "text-black";} ?> p-2 rounded-lg"><span><?= htmlspecialchars($tag->name) ?></span></div> 
+                    <div class="bg-<?=$tag->color?> <?php if($tag->color === "jscustom" || $tag->color === "rustcustom") {echo "text-black";} ?> p-2 rounded-lg"><span><?= htmlspecialchars($tag->name) ?></span></div> 
                 <?php endforeach; ?>
                 </div>
                 <hr class="border-border-custom my-5">
