@@ -125,3 +125,19 @@ scroll_inidcator?.addEventListener('click', function() {
     const scroll_target = document.getElementById('about_me');
     scroll_target?.scrollIntoView();
 });
+
+function toggleDescription(id) {
+    const el = document.getElementById('project-desc-' + id);
+    const btn = document.getElementById('more-less-btn-' + id);
+    const current = el.textContent.trim();
+    const shortText = el.getAttribute('data-short');
+    const fullText  = el.getAttribute('data-full');
+
+    if (current === shortText) {
+        el.textContent = fullText;
+        btn.innerText = "See less";
+    } else {
+        el.textContent = shortText;
+        btn.innerText = "See more";
+    }
+}
