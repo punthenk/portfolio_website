@@ -52,6 +52,7 @@
     --color-tlwcustom: #47bff8;
     --color-csharpcustom: #853d8c;
     --color-sqlcustom: #e0712b;
+    --color-rustcustom: #dea584;
     --font-inter: "Inter", sans-serif;
     --font-jetbrains: "JetBrains Mono", Courier New;
   }
@@ -358,9 +359,6 @@
   .min-h-\[618px\] {
     min-height: 618px;
   }
-  .w-2\.5 {
-    width: calc(var(--spacing) * 2.5);
-  }
   .w-7 {
     width: calc(var(--spacing) * 7);
   }
@@ -391,14 +389,11 @@
   .max-w-\[400px\] {
     max-width: 400px;
   }
+  .max-w-\[500px\] {
+    max-width: 500px;
+  }
   .max-w-\[800px\] {
     max-width: 800px;
-  }
-  .max-w-max {
-    max-width: max-content;
-  }
-  .max-w-min {
-    max-width: min-content;
   }
   .max-w-screen-lg {
     max-width: var(--breakpoint-lg);
@@ -421,8 +416,17 @@
   .scroll-mt-33 {
     scroll-margin-top: calc(var(--spacing) * 33);
   }
+  .\[grid-template-columns\:repeat\(auto-fit\,minmax\(200px\,1fr\)\)\] {
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  }
   .\[grid-template-columns\:repeat\(auto-fit\,minmax\(300px\,1fr\)\)\] {
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  }
+  .\[grid-template-columns\:repeat\(auto-fit\,minmax\(350px\,1fr\)\)\] {
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  }
+  .\[grid-template-columns\:repeat\(auto-fit\,minmax\(400px\,1fr\)\)\] {
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -537,6 +541,9 @@
   }
   .bg-phpcustom {
     background-color: var(--color-phpcustom);
+  }
+  .bg-rustcustom {
+    background-color: var(--color-rustcustom);
   }
   .bg-sqlcustom {
     background-color: var(--color-sqlcustom);

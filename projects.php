@@ -51,7 +51,7 @@ foreach ($results as $row) {
 
     <div class="w-full bg-bg-grey p-5 sm:p-15 grid [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))] gap-10 items-stretch">
         <!-- this is for loading all the colors before the get used because of some loading issues -->
-        <div class="hidden bg-jscustom bg-phpcustom bg-csscustom bg-htmlcustom bg-tlwcustom bg-csharpcustom bg-sqlcustom"></div>
+        <div class="hidden bg-jscustom bg-phpcustom bg-csscustom bg-htmlcustom bg-tlwcustom bg-csharpcustom bg-sqlcustom bg-rustcustom"></div>
 
         <?php foreach ($projects as $project): ?>
         <!-- BEGIN -->
