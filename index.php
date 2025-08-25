@@ -48,7 +48,7 @@ include_once(__DIR__."/template/head.inc.php");
             name<span class="rest">:</span> <span class="string">"Michiel Nijenhuis"</span><span class="rest">,</span>
         </p>
         <p class="ml-4 mb-2 variable">
-            email<span class="rest">:</span> <span class="string">"contact@michielnijenhuis.com"</span><span
+            email<span class="rest">:</span> <span class="string"><a href="mailto:contact@michielnijenhuis.com">"contact@michielnijenhuis.com"</a></span><span
                 class="rest">,</span>
         </p>
         <p class="ml-4 mb-2 variable">
