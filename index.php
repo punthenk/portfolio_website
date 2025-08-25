@@ -80,7 +80,7 @@ include_once(__DIR__."/template/head.inc.php");
         Work</a>, where I contributed to frontend development and worked with <strong class="hover:text-blue-400 transition-colors">WordPress</strong>.</p><br>
 
         <p>My personal projects are more diverse. I enjoy web development, but I also like building applications outside
-        the browser, for example with C#. I’m always trying to learn new things, keep it challenging and fun.</p>
+        the browser, for example with <strong>C#</strong> or <strong>Rust</strong>. I’m always trying to learn new things, keep it challenging and fun.</p>
     </div>
     <div class="h-auto mt-5 flex gap-5">
         <a href="https://github.com/punthenk" target="_blank" class="h-8 hover:cursor-pointer"><img
