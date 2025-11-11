@@ -14,7 +14,7 @@ Database::query( "
     FROM projects p
     LEFT JOIN project_tags pt ON p.id = pt.project_id
     LEFT JOIN tags t ON pt.tag_id = t.id
-    ORDER BY p.id
+    ORDER BY p.id DESC
 ");
 $results = Database::getAll();
 
