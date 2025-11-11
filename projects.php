@@ -63,12 +63,13 @@ foreach ($results as $row) {
             <div class="bg-background flex flex-grow flex-col justify-between rounded-b-lg p-5 w-full min-h-6/12">
                 <div class="">
                     <h2 class="text-2xl font-bold mb-2"><?= $project->title ?></h2> 
-                    <p id="project-desc-<?= $project->id ?>" class="hover:cursor-pointer"
+                    <p id="project-desc-<?= $project->id ?>" 
+                        class="hover:cursor-pointer"
                         onclick="toggleDescription(<?= $project->id ?>)"
-                        data-short="<?= htmlspecialchars(substr($project->description, 0, 80).'...', ENT_QUOTES, 'UTF-8') ?>"
-                        data-full="<?= htmlspecialchars($project->description, ENT_QUOTES, 'UTF-8') ?>"
+                        data-short="<?= substr($project->description, 0, 80).'...' ?>"
+                        data-full="<?= $project->description ?>"
                     >
-                        <?= htmlspecialchars(substr($project->description, 0, 80).'...') ?> 
+                        <?= substr($project->description, 0, 80).'...' ?> 
                     </p>
                     <span id="more-less-btn-<?= $project->id ?>" class="hover:cursor-pointer text-redcustom font-bold" onclick="toggleDescription(<?= $project->id ?>)" >See more</span>
                 </div>

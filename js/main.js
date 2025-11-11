@@ -129,15 +129,15 @@ scroll_inidcator?.addEventListener('click', function() {
 function toggleDescription(id) {
     const el = document.getElementById('project-desc-' + id);
     const btn = document.getElementById('more-less-btn-' + id);
-    const current = el.textContent.trim();
+    const current = el.innerHTML.trim();
     const shortText = el.getAttribute('data-short');
     const fullText  = el.getAttribute('data-full');
 
     if (current === shortText) {
-        el.textContent = fullText;
+        el.innerHTML = fullText;
         btn.innerText = "See less";
     } else {
-        el.textContent = shortText;
+        el.innerHTML = shortText;
         btn.innerText = "See more";
     }
 }
