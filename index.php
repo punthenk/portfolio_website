@@ -127,7 +127,7 @@ include_once(__DIR__."/template/head.inc.php");
                 <span><span class="terminal-arrow">➜</span> <span class="terminal-path">send/the/message</span> <span
                         class="variable">git:(<span class="branch">message</span>)</span> run
                     <input class="outline-none w-[120px]" id="message_input" autocomplete="off" type="text" name=""
-                        value="" placeholder="send message">
+                        value="" maxlength="12" placeholder="send message">
                 </span>
                 <p id="try_again" class="hidden text-redcustom">Try again</p>
                 <p id="approved" class="hidden font-medium text-green-500">Yes! Thank you! The message has been send</p>
