@@ -157,3 +157,36 @@
         animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
 }
+
+/* Custom block cursor */
+input:focus, textarea:focus {
+    background: transparent;
+    caret-color: transparent;
+}
+
+.input-line {
+    /* transition: background-color 0.2s ease; */
+    margin: 0 -40px;
+    padding-left: 40px;
+    border-radius: 4px;
+}
+
+.input-line:focus-within, .input-line:hover {
+    background-color: rgba(68, 71, 90, 0.3);
+}
+
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.block-cursor {
+    position: absolute;
+    width: 8px;
+    height: 20px;
+    background: white;
+    pointer-events: none;
+    animation: blink 1s infinite;
+    top: 50%;
+    transform: translateY(-50%);
+}
