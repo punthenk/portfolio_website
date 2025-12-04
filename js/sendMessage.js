@@ -23,7 +23,7 @@ if (input) {
         if (e.key === 'Enter') {
             const val = input.value.trim();
 
-            if (val.toLowerCase() === 'send message') {
+            if (val.toLowerCase() === 'send-message') {
                 form.requestSubmit();
             } else {
                 try_again.style.display = "block";

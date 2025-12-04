@@ -55,10 +55,11 @@ include_once(__DIR__."/template/head.inc.php");
             skills<span class="rest">:</span> <span class="rest">[</span>
             <span class="string">"HTML"</span><span class="rest">,</span>
             <span class="string">"CSS"</span><span class="rest">,</span>
-            <span class="string">"PHP"</span><span class="rest">,</span>
-            <span class="string">"C#"</span><span class="rest">,</span>
             <span class="string">"JAVASCRIPT"</span><span class="rest">,</span>
-            <span class="string">"SQL"</span>
+            <span class="string">"PHP"</span><span class="rest">,</span>
+            <span class="string">"SQL"</span><span class="rest">,</span>
+            <span class="string">"C#"</span><span class="rest">,</span>
+            <span class="string">"RUST"</span>
             <span class="rest">]</span><span class="rest">,</span>
         </p>
         <p class="ml-4 mb-2 variable">
@@ -96,45 +97,91 @@ include_once(__DIR__."/template/head.inc.php");
     <h2 class="text-4xl font-bold">CONTACT</h2>
     <form action="https://api.web3forms.com/submit" method="POST" id="message_form" class="landscape-contact">
         <input type="hidden" name="access_key" value="de08dff7-641a-4623-9b73-a9cf3ab34b31">
+
         <div class="flex flex-row my-15 justify-between gap-5">
-            <div class="flex flex-col max-w-1/2 w-full">
-                <div class="flex flex-col">
-                    <span class="ml-2 font-bold">Full Name</span>
-                    <input id="name" class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300"
-                        type="text" name="name" value="" placeholder="Firstname Lastname" autocomplete="off" required>
+            <div class="border border-border-custom w-11/12 m-auto bg-black rounded-lg flex flex-col justify-start p-7 pb-14 font-jetbrains font-medium">
+                <span class="mx-auto text-white mb-5">Terminal - contact</span>
+                <div>
+                    <span><span class="terminal-arrow">➜</span> <span class="terminal-path">send/the/message</span> <span
+                        class="variable">git:(<span class="branch">message</span>)</span>
+                        <span class="string"> ✗ </span>
+                        <span>contact</span><span class="cursor"></span>
                 </div>
-                <div class="flex flex-col mt-5">
-                    <span class="ml-2 font-bold">Email</span>
-                    <input id="email"
-                        class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300" type="email"
-                        name="email" value="" placeholder="your@email.com" required>
+                <div class="px-10 py-7 flex flex-col justify-center ">
+                    <div class="input-line">
+                        <div class="py-3"><span class="comment">1 </span><span>name: </span>
+                            <div class="input-wrapper inline-block w-8/12">
+                                <input 
+                                    id="name" 
+                                    type="text" 
+                                    name="name" 
+                                    value="" 
+                                    placeholder="# Firstname Lastname" 
+                                    autocomplete="off" 
+                                    required
+                                    class="w-full placeholder:comment"/>
+                                <div class="block-cursor" id="name-cursor"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-line">
+                        <div class="py-3"><span class="comment">2 </span><span>email: </span>
+                            <div class="input-wrapper inline-block w-8/12">
+                                <input 
+                                    id="email" 
+                                    type="email" 
+                                    name="email" 
+                                    value="" 
+                                    placeholder="# your@email.com" 
+                                    autocomplete="off"
+                                    required
+                                    class="w-full placeholder:comment"/>
+                                <div class="block-cursor" id="email-cursor"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-line">
+                        <div class="py-3"><span class="comment">3 </span><span>message: </span>
+                            <div class="input-wrapper inline-block w-8/12 align-top">
+                                <textarea 
+                                    id="message"
+                                    rows="1"
+                                    placeholder="# Write your message here" 
+                                    name="message" 
+                                    required
+                                    oninput="this.style.height = 'auto'; this.style.height = this.scrollHeight + 'px'"
+                                    class="w-full resize-none overflow-hidden placeholder:comment"></textarea>
+                                <div class="block-cursor" id="message-cursor"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="flex flex-col w-full max-w-1/2 ">
-                <span class="ml-2 font-bold">Message</span>
-                <textarea id="message"
-                    class="border border-border-custom rounded-md p-3 w-full placeholder:text-gray-300 h-full"
-                    placeholder="Write your message here" name="message" required></textarea>
+
+                <div class=""><span class="comment">4 </span>
+                    <span>to send the message you type '<span class="text-redcustom font-bold">send-message</span>'
+                        and press <span class="text-redcustom font-bold">Enter</span></span></div>
+
+                <div class="w-full flex flex-row justify-items-start mt-5 font-bold">
+                    <span>
+                        <span class="terminal-arrow">➜</span> 
+                        <span class="terminal-path">send/the/message</span> 
+                        <span class="variable">git:(<span class="branch">message</span>)</span>
+                        <span class="string"> ✗ </span>
+                        <span class="input-wrapper inline-block">
+                            <input class="outline-none w-[120px]" id="message_input" autocomplete="off" type="text" name="" value="" maxlength="12" placeholder="send-message">
+                            <span class="block-cursor" id="submit-cursor"></span>
+                        </span>
+                    </span>
+                    <p id="try_again" class="hidden text-redcustom ml-3">Try again</p>
+                    <p id="approved" class="hidden font-medium text-green-500 ml-3">Yes! Thank you! The message has been send</p>
+                </div>
             </div>
         </div>
 
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-        <div class="flex flex-col w-full justify-center items-center font-jetbrains">
-            <p>Type '<span class="text-redcustom font-bold">send message</span>' and press <span
-                    class="text-redcustom font-bold">Enter</span> to send the message</p>
-            <div class="w-full flex flex-row justify-center mt-5 font-bold">
-                <span><span class="terminal-arrow">➜</span> <span class="terminal-path">send/the/message</span> <span
-                        class="variable">git:(<span class="branch">message</span>)</span> run
-                    <input class="outline-none w-[120px]" id="message_input" autocomplete="off" type="text" name=""
-                        value="" maxlength="12" placeholder="send message">
-                </span>
-                <p id="try_again" class="hidden text-redcustom">Try again</p>
-                <p id="approved" class="hidden font-medium text-green-500">Yes! Thank you! The message has been send</p>
-            </div>
-        </div>
         <div class="w-full flex flex-col items-center justify-center">
-            <p class="mt-30">For the people that dont understand how to type text and press enter:</p>
+            <p class="mt-7">For the people that dont understand how to type text and press enter:</p>
             <button id="message_button" type="button"
                 class="bg-white hover:bg-gray-100 hover:cursor-pointer text-gray-800 font-semibold py-2 px-4 mt-5 border border-gray-400 rounded shadow">SEND
                 MESSAGE</button>

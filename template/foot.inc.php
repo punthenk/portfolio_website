@@ -4,6 +4,7 @@
         <p><span>&copy;</span>Michiel Nijenhuis</p>
     </footer>
     <script src="js/sendMessage.js?ver=1"></script>
+    <script src="js/blockCursor.js?ver=1"></script>
     <script src="js/main.js?ver=1"></script>
 </body>
 </html>
