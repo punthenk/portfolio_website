@@ -954,9 +954,11 @@
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
-input:focus, textarea:focus {
-  background: transparent;
-  caret-color: transparent;
+@media screen and (min-width: 600px) {
+  input:focus, textarea:focus {
+    background: transparent;
+    caret-color: transparent;
+  }
 }
 .input-line {
   margin: 0 -40px;

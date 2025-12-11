@@ -4,28 +4,36 @@ function updateCursor(input, cursorElement) {
     const isTextarea = input.tagName === 'TEXTAREA';
 
     if (isTextarea) {
-        // For textarea, calculate cursor position based on lines
-        const lines = value.split('\n');
-        const lastLine = lines[lines.length - 1];
+        // Create a temporary div to measure wrapped text
+        const tempDiv = document.createElement('div');
+        tempDiv.style.font = window.getComputedStyle(input).font;
+        tempDiv.style.width = input.offsetWidth + 'px';
+        tempDiv.style.visibility = 'hidden';
+        tempDiv.style.position = 'absolute';
+        tempDiv.style.whiteSpace = 'pre-wrap';
+        tempDiv.style.wordWrap = 'break-word';
+        tempDiv.style.lineHeight = window.getComputedStyle(input).lineHeight;
+        tempDiv.textContent = value + '|'; // Add marker at cursor position
+        document.body.appendChild(tempDiv);
 
-        const tempSpan = document.createElement('span');
-        tempSpan.style.font = window.getComputedStyle(input).font;
-        tempSpan.style.visibility = 'hidden';
-        tempSpan.style.position = 'absolute';
-        tempSpan.style.whiteSpace = 'pre';
-        tempSpan.textContent = lastLine || '';
-        document.body.appendChild(tempSpan);
+        // Find the position of the marker
+        const range = document.createRange();
+        const textNode = tempDiv.firstChild;
+        if (textNode) {
+            range.setStart(textNode, value.length);
+            range.setEnd(textNode, value.length + 1);
+            const rect = range.getBoundingClientRect();
+            const containerRect = tempDiv.getBoundingClientRect();
 
-        const textWidth = tempSpan.offsetWidth;
-        document.body.removeChild(tempSpan);
+            const relativeLeft = rect.left - containerRect.left;
+            const relativeTop = rect.top - containerRect.top;
 
-        // Calculate vertical position based on line number
-        const lineHeight = parseInt(window.getComputedStyle(input).lineHeight) || 20;
-        const topOffset = (lines.length - 1) * lineHeight;
+            cursorElement.style.left = (input.offsetLeft + relativeLeft) + 'px';
+            cursorElement.style.top = (input.offsetTop + relativeTop) + 'px';
+            cursorElement.style.transform = 'none';
+        }
 
-        cursorElement.style.left = (input.offsetLeft + textWidth) + 'px';
-        cursorElement.style.top = (input.offsetTop + topOffset) + 'px';
-        cursorElement.style.transform = 'none';
+        document.body.removeChild(tempDiv);
     } else {
         // For regular inputs
         const tempSpan = document.createElement('span');

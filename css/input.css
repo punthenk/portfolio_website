@@ -159,9 +159,12 @@
 }
 
 /* Custom block cursor */
-input:focus, textarea:focus {
-    background: transparent;
-    caret-color: transparent;
+
+@media screen and (min-width: 600px) {
+    input:focus, textarea:focus {
+        background: transparent;
+        caret-color: transparent;
+    }
 }
 
 .input-line {
