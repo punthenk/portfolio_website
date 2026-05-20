@@ -15,9 +15,15 @@
     --color-csharpcustom: #853d8c;
     --color-sqlcustom: #e0712b;
     --color-rustcustom: #dea584;
+    --color-cppcustom: #f34b7d;
 
     --font-inter: "Inter", sans-serif;
     --font-jetbrains: "JetBrains Mono", Courier New;
+}
+
+.a-link {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .keyword {
@@ -29,13 +35,13 @@
 }
 
 ::-moz-selection {
-    background-color: #596a9b60;
+    background-color: #1450bb;
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 *::selection {
-    background-color: #596a9b60;
+    background-color: #1450bb;
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -51,6 +57,9 @@
 }
 .rest {
     color: #908caa;
+}
+.string a {
+    text-decoration: underline;
 }
 
 .comment {

@@ -19,9 +19,9 @@ include_once(__DIR__."/template/head.inc.php");
             <div>
                 <h2 class="font-bold text-4xl mb-5">Hello,</h2>
                 <p class="max-w-[800px] w-full font-medium">My name is <span class="text-redcustom font-bold">
-                    Michiel Nijenhuis</span>. I am a software developer. I love building and
-                    learning new things. I like programming a lot, I code a lot at home and make projects
-                    I’m intrested in.<br><br>
+                    Michiel Nijenhuis</span>. I am a software developer and open source contributor. I love building and
+                    learning new things. I like programming a lot, I spend much spare time coding and creating projects
+                    I’m interested in.<br><br>
 
                     So that is why I show my projects on this site so you can see them!</p>
             </div>
@@ -56,10 +56,13 @@ include_once(__DIR__."/template/head.inc.php");
             <span class="string">"HTML"</span><span class="rest">,</span>
             <span class="string">"CSS"</span><span class="rest">,</span>
             <span class="string">"JAVASCRIPT"</span><span class="rest">,</span>
+            <span class="string">"NODE"</span><span class="rest">,</span>
             <span class="string">"PHP"</span><span class="rest">,</span>
             <span class="string">"SQL"</span><span class="rest">,</span>
+            <span class="string">"NoSQL"</span><span class="rest">,</span>
             <span class="string">"C#"</span><span class="rest">,</span>
-            <span class="string">"RUST"</span>
+            <span class="string">"RUST"</span><span class="rest">,</span>
+            <span class="string">"C++"</span>
             <span class="rest">]</span><span class="rest">,</span>
         </p>
         <p class="ml-4 mb-2 variable">
@@ -75,13 +78,24 @@ include_once(__DIR__."/template/head.inc.php");
         free time. I enjoy solving problems I come across. I like diving into them and researching until I find the
         solution.</p><br>
 
-        <p>I’m also a big fan of <strong>terminals</strong>, they just look cool and are awsome :)</p><br>
+        <p>
+            Recently I have also been looking to work on open source projects. I found 
+            <a class="font-bold hover:text-violet-400 transition-colors underline" href="https://ladybird.org" target="_blank">Ladybird</a>
+            a very interesting project. And so I tried to fix something myself, and so I did. I created a pull request on GitHub,
+            and after a little back and forth, it got accepted! I learned a lot from the things I did on that project and contributing to open source.
+        </p><br>
 
-        <p>I’m currently a second-year software developer student, and I really enjoy it. I’ve also worked at <a class="font-bold hover:text-redcustom transition-colors underline" target="_blank" href="https://creativework.nl">Creative
-        Work</a>, where I contributed to frontend development and worked with <strong class="hover:text-blue-400 transition-colors">WordPress</strong>.</p><br>
+        <p>I’m also a big fan of <strong>terminals</strong>, they just look cool and are awesome :)</p><br>
+
+        <p>I’m currently a second-year software development student, and I really enjoy it. I’ve also worked at 
+            <a class="font-bold hover:text-redcustom transition-colors underline" target="_blank" href="https://creativework.nl">CreativeWork </a>,
+            now <a class="font-bold hover:text-pink-500 transition-colors underline" target="_blank" href="https://codewow.nl">CodeWOW!</a>,
+            where I contributed to frontend development and worked with <strong class="hover:text-blue-400 transition-colors">WordPress</strong>.
+            Now in my second half year of school, I have an internship at CodeWOW! I do a lot of work in large Meteor.js projects and a little bit of laravel.
+        </p><br>
 
         <p>My personal projects are more diverse. I enjoy web development, but I also like building applications outside
-        the browser, for example with <strong>C#</strong> or <strong>Rust</strong>. I’m always trying to learn new things, keep it challenging and fun.</p>
+        the browser, for example with <strong>C#</strong>, <strong>Rust</strong> or building an encrypted chat system in <strong>C++</strong>. I’m always trying to learn new things, keep it challenging and fun.</p>
     </div>
     <div class="h-auto mt-5 flex gap-5">
         <a href="https://github.com/punthenk" target="_blank" class="h-8 hover:cursor-pointer"><img
@@ -181,7 +195,7 @@ include_once(__DIR__."/template/head.inc.php");
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
         <div class="w-full flex flex-col items-center justify-center">
-            <p class="mt-7">For the people that dont understand how to type text and press enter:</p>
+            <p class="mt-7">For the people that don't understand how to type text and press enter:</p>
             <button id="message_button" type="button"
                 class="bg-white hover:bg-gray-100 hover:cursor-pointer text-gray-800 font-semibold py-2 px-4 mt-5 border border-gray-400 rounded shadow">SEND
                 MESSAGE</button>
