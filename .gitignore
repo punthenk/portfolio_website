@@ -1,5 +1,7 @@
 node_modules
+vendor
 package-lock.json
+composer.lock
 .DS_Store
 css/output.css
 .env
